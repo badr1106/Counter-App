@@ -20,12 +20,12 @@ const marks = [
 ];
 
 export default function MaterialSlider(props) {
-  const [num, setNum] = useState(0);
+  // const [num, setNum] = useState(0);
 
   const dispatch = useDispatch();
 
   function valuetext(value) {
-    setNum(value);
+    // setNum(value);
     dispatch(sliderNum(value));
     return value;
   }
