@@ -6,10 +6,12 @@ import {
 } from "../constants/ActionTypes";
 
 export default function reducer(
-  state = { counter: 0, reverseCounter: 0, slider_value: 1 },
+  state = { counter: 0, reverseCounter: 0, slider_value: 1 }, // Declared reverseCounter = 0 for the first time 7ateto fel state beta3 el reducer da w same el slider value
   action
 ) {
-  switch (action.type) {
+  switch (
+    action.type // based 3al action.type elly mawgod f countAractions.js bey5osh 3ala el cases
+  ) {
     case INCREMENT_NUM:
       return (state = {
         ...state,
@@ -29,7 +31,7 @@ export default function reducer(
       });
     case RESET:
       return (state = {
-        ...state,
+        ...state, // ba spread el state w ba update el state bel counter w el reverse
         counter: 0,
         reverseCounter: 0,
       });

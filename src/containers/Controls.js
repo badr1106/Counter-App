@@ -10,21 +10,6 @@ import {
 
 export class Controller extends Component {
   render() {
-    var map = {};
-    document.addEventListener("keydown", function (e) {
-      map[e.key] = true;
-      if (map["Control"] && map["ArrowRight"]) {
-        dispatch(this.props.incrementNum());
-      }
-      if (map["Control"] && map["ArrowLeft"]) {
-        dispatch(this.props.decrementNum());
-      }
-    });
-
-    document.addEventListener("keyup", function (e) {
-      map[e.key] = false;
-    });
-
     return <Controls {...this.props} />;
   }
 }

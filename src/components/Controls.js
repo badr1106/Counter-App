@@ -17,7 +17,6 @@ class Controls extends Component {
       counterType,
     } = this.props;
 
-    console.log(this.props);
     let map = {};
     document.addEventListener("keydown", function (e) {
       map[e.key] = true;
@@ -26,6 +25,9 @@ class Controls extends Component {
       }
       if (map["Control"] && map["ArrowLeft"] && counterType == "counter") {
         decrement();
+      }
+      if (map["Control"] && map["ArrowUp"] && counterType == "counter") {
+        reset();
       }
     });
 

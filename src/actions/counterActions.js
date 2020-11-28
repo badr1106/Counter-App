@@ -20,6 +20,7 @@ export function decrementNum(payload) {
 }
 
 export function resetNum(payload) {
+  // First step added da el action beta3 el reset.
   return {
     type: RESET,
     payload: payload,
